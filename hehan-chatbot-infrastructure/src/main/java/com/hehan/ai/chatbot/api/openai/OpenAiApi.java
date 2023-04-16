@@ -27,6 +27,7 @@ public class OpenAiApi {
         String result = HttpRequest.post(url)
                 .header("Authorization", "Bearer " + openAiApiKey)
                 .body(json)
+//                .setProxy(new Proxy(Proxy.Type.HTTP,new InetSocketAddress("127.0.0.1", 7890)))
                 .execute()
                 .body();
         return JSONUtil.toBean(result, CreateCompletionResponse.class);

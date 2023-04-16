@@ -8,6 +8,8 @@ import com.hehan.ai.chatbot.api.zsxq.model.ListTopicsResponse;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import static com.hehan.ai.chatbot.api.zsxq.HttpsTest.sendHttps;
+
 /**
  * @author 鹤涵，微信：hehan4096
  * @description
@@ -34,5 +36,14 @@ public class ZSXQApiTest {
                 .setReq_data(new AnswerRequest.ReqData().setText(content).setSilenced(false));
         AnswerResponse response = ZsxqApi.reply(req, cookie);
         System.out.println(JSONUtil.toJsonStr(response));
+    }
+
+    @Test
+    public void test() {
+        try {
+            System.out.println(sendHttps("https://api.openai.com"));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

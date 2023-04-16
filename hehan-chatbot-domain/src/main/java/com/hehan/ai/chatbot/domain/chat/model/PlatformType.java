@@ -13,6 +13,7 @@ import lombok.Getter;
 public enum PlatformType {
     demo("默认"),
     zsxq("知识星球"),
+    web_requestion("web访问"),
     ;
     @Getter
     private final String name;

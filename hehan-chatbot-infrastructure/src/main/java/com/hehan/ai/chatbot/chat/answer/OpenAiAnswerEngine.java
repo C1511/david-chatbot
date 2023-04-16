@@ -40,8 +40,9 @@ public class OpenAiAnswerEngine implements AnswerEngine {
         chatGPT = ChatGPT.builder()
                 .apiKeyList(keys)
                 .apiHost("https://api.openai.com/") //反向代理地址
-                .build()
-                .init();
+                .build();
+//        chatGPT.setProxy(new Proxy(Proxy.Type.SOCKS,new InetSocketAddress("127.0.0.1", 7890)));
+        chatGPT.init();
         model = Arrays.stream(ChatCompletion.Model.values())
                 .filter(e -> e.getName().equals(openAiConfig.getModel()))
                 .findFirst().orElseThrow(() -> new RuntimeException("model not found"));

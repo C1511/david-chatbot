@@ -16,7 +16,7 @@ public class CreateCompletionRequest {
     /**
      * 模型
      */
-    private String model = ModelConstant.TEXT_DAVINCI_003;
+    private String model = ModelConstant.GPT_3_5_TURBO;
 
     /**
      * 提示词

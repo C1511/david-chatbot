@@ -1,6 +1,5 @@
 package com.hehan.ai.chatbot.scheduler;
 
-import cn.hutool.core.util.RandomUtil;
 import com.hehan.ai.chatbot.domain.chat.model.ChatBot;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -38,10 +37,10 @@ public class ChatBotScheduler implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-        log.info("configureTasks begin");
-        for (SchedulerItem item : list) {
-            taskRegistrar.addCronTask(doChat(item), item.getCron());
-        }
-        log.info("configureTasks end");
+//        log.info("configureTasks begin");
+//        for (SchedulerItem item : list) {
+//            taskRegistrar.addCronTask(doChat(item), item.getCron());
+//        }
+//        log.info("configureTasks end");
     }
 }
