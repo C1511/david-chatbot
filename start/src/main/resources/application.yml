@@ -11,7 +11,7 @@ server:
 #  forward-headers-strategy: framework
 openai:
   model: ${OPENAI_MODEL:gpt-3.5-turbo}
-  apiKey: ${OPENAI_API_KEY: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}
+  apiKey: ${OPENAI_API_KEY:}
 zsxq:
   cookie: ${ZSXQ_COOKIE:你的星球cookie}
   groupId: ${ZSXQ_GROUP_ID:你的星球id}
